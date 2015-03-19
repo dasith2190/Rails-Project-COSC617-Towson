@@ -1,0 +1,42 @@
+<%= form_for(@post) do |f| %>
+    <% if @post.errors.any? %>
+        <div id="error_explanation">
+
+
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :titleitle %><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :image_url %><br>
+      <%= f.text_field :image_url %>
+    </div>
+    <div class="field">
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+    </div>
+
+    <div class="field">
+      <%= f.label :store_quantity %><br>
+      <%= f.text_field :store_quantity %>
+    </div>
+
+    <div class="field">
+      <%= f.label :online_quantity %><br>
+      <%= f.text_field :online_quantity %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+
+<% end %>
