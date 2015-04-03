@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :reviews
+
+  resources :postcs
+
   get 'message/sendmessage'
 
   get 'message/success'
