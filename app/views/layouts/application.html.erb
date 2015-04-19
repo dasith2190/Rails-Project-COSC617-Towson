@@ -7,21 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 
-
 <body>
 <div class="header-wrapper">
-  <div class="header-content">
-    </div>
+
+  <div class="header-content2">
+    <%=link_to 'Sign up' %>
+    <%=link_to 'Log in' %>
+    <%=link_to 'List your space'%>
+  </div>
 </div>
 <div class="search-wrapper">
 
   <div class="search">
-    <p> <%= form_tag '/postc/index' %>
+    <p> <%= form_tag '/search/searchresult' %>
 
 
       <%= text_field_tag "search", nil, :placeholder => 'Where do you want to go?' %>
-      <%=date_field_tag('check-in', value = nil, options = {})%>
-      <%=date_field_tag('check-out', value = nil, options = {})%>
+      <input placeholder="Check In" name="check-in" type="text" onblur="(this.type='text')" onfocus="(this.type='date')"  id="check-in">
+      <input placeholder="Check Out" name="check-out" type="text" onblur="(this.type='text')" onfocus="(this.type='date')"  id="check-out">
+
 
       <%= submit_tag 'Search'%></p>
   </div>

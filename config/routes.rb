@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'search/searchresult'
+
+  post 'search/searchresult'
 
   resources :reviews
 

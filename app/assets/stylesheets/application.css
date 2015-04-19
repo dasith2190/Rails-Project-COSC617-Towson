@@ -71,3 +71,12 @@ body{
     margin-right: auto;
     padding-top: 2em;
 }
+
+.header-content2 {
+    float: right;
+    padding-right: 2em;
+}
+
+.header-content2 a {
+    padding: 5px;
+}
