@@ -1,6 +1,8 @@
 class PostcsController < ApplicationController
   before_action :set_postc, only: [:show, :edit, :update, :destroy]
 
+  @post_typ= ['Apartment', 'House']
+
   # GET /postcs
   # GET /postcs.json
   def index
@@ -69,6 +71,6 @@ class PostcsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def postc_params
-      params.require(:postc).permit(:user_idfk, :, :post_title, :, :post_description, :, :address, :, :country, :, :zip, :, :city, :, :price, :home_type, :, :rooms, :, :baths, :, :price, :, :price_type, :)
+      params.require(:postc).permit(:user_idfk,  :post_title,  :post_description, :address,  :country,  :zip,  :city,  :price, :home_type, :rooms, :baths,  :price,  :price_type)
     end
 end

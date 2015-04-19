@@ -6,9 +6,29 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
+<div class="header-wrapper">
+  <div class="header-content">
+    </div>
+</div>
+<div class="search-wrapper">
 
+  <div class="search">
+    <p> <%= form_tag '/postc/index' %>
+
+
+      <%= text_field_tag "search", nil, :placeholder => 'Where do you want to go?' %>
+      <%=date_field_tag('check-in', value = nil, options = {})%>
+      <%=date_field_tag('check-out', value = nil, options = {})%>
+
+      <%= submit_tag 'Search'%></p>
+  </div>
+</div>
+
+<div class="main">
 <%= yield %>
-
+</div>
 </body>
 </html>
