@@ -3,8 +3,6 @@
     <div id="error_explanation">
       <h2><%= pluralize(@postc.errors.count, "error") %> prohibited this postc from being saved:</h2>
 
-
-
       <ul>
       <% @postc.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,10 +11,7 @@
     </div>
   <% end %>
 
-
-    <%= #f.collection_select :day, Day.order(:date), :id, @post_typ, include_blank: false %>
-
-    <div class="field">
+  <div class="field">
     <%= f.label :user_idfk %><br>
     <%= f.text_field :user_idfk %>
   </div>
@@ -45,6 +40,7 @@
     <%= f.label :city %><br>
     <%= f.text_field :city %>
   </div>
+
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
@@ -53,6 +49,7 @@
     <%= f.label :home_type %><br>
     <%= f.text_field :home_type %>
   </div>
+
   <div class="field">
     <%= f.label :rooms %><br>
     <%= f.text_field :rooms %>
@@ -70,6 +67,6 @@
     <%= f.text_field :price_type %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Listing' %>
   </div>
 <% end %>
