@@ -19,7 +19,7 @@
 <div class="search-wrapper">
 
   <div class="search">
-    <p> <%= form_tag '/search/searchresult' %>
+    <p> <%= form_tag '/search/searchresult' do %>
 
 
       <%= text_field_tag "search", nil, :placeholder => 'Where do you want to go?' %>
@@ -28,6 +28,7 @@
 
 
       <%= submit_tag 'Search'%></p>
+    <%end%>
   </div>
 </div>
 
