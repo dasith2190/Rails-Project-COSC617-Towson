@@ -16,6 +16,7 @@ class PostcsController < ApplicationController
 
   # GET /postcs/new
   def new
+    session_information
     @postc = Postc.new
   end
 
@@ -72,5 +73,17 @@ class PostcsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def postc_params
       params.require(:postc).permit(:user_idfk,  :post_title,  :post_description, :address,  :country,  :zip,  :city,  :price, :home_type, :rooms, :baths,  :price,  :price_type)
+    end
+
+    #Tests if the user is logged in, if they are not the page is redirected
+    def session_information
+      @user_id=session[:user_id]
+
+      if @user_id.nil?
+        #render :text => 'inside nil'.inspect
+
+        #Make sure to change this
+        #redirect_to postcs_url
+      end
     end
 end
