@@ -4,7 +4,7 @@ class MainController < ApplicationController
 
   def index
   end
-
+	@task=""
   def index2
 
 end
