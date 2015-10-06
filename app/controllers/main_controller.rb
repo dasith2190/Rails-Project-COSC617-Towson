@@ -8,4 +8,8 @@ class MainController < ApplicationController
   def index2
 @task=""
 end
+
+def index3
+@empty=''
+end
 end
